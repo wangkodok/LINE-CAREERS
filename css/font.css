@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/* font-family: 'line seed', sans-serif; */
+
+@font-face {
+  font-family: 'LineSeed', sans-serif;
+  src: url('../font/LINESeed_W_Rg.woff') format('woff');
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: 'LineSeed', sans-serif;
+  src: url('../font/LINESeed_W_Bd.woff') format('woff');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'LineSeed', sans-serif;
+  src: url('../font/LINESeed_W_XBd.woff') format('woff');
+  font-weight: 700;
+}

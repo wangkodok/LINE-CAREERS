@@ -1,0 +1,255 @@
+@charset "utf-8";
+
+:root {
+  --font-M_PLUS_1p: 'M PLUS 1p', sans-serif;
+}
+
+.wrap .inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.sub-header .contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 88px;
+  padding: 0 32px;
+}
+
+.sub-header .contents .layout {
+  display: flex;
+  align-items: center;
+}
+
+.sub-header .logo {
+  margin: 0 50px 0 0;
+}
+
+.sub-header .logo img {
+  height: 16px;
+  display: block;
+}
+
+.sub-header .gnb-list {
+  display: flex;
+}
+
+.sub-header .gnb-item{
+  margin: 0 40px 0 0;
+}
+
+.sub-header .gnb-link {
+  line-height: 88px;
+  font-family: var(--font-M_PLUS_1p);
+  font-weight: 700;
+}
+
+.sub-header .util {
+  display: flex;
+  position: relative;
+  width: 112px;
+  justify-content: space-between;
+}
+
+.sub-header .util::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 74px;
+  transform: translate(0, -50%);
+  width: 1px;
+  height: 18px;
+  background-color: #e5e5e5;
+}
+
+.sub-header .util .language {
+  position: relative;
+  padding: 0 10px 0 28px;
+  font-size: 14px;
+  font-family: var(--font-M_PLUS_1p);
+  font-weight: 500;
+}
+
+.sub-header .util .language::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url('../image/icon_b.png') no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+}
+
+.sub-header .util .language::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  background: url('../image/icon_arr.png') no-repeat;
+  background-size: cover;
+  width: 5px;
+  height: 3px;
+}
+
+.sub-header .util .search-btn {
+  background: url('../image/icon_se.png') no-repeat;
+  background-size: cover;
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.sub-header .mobile-util {
+  display: none;
+}
+
+.sub-container .title {
+  font-size: 60px;
+  font-family: var(--font-M_PLUS_1p);
+  font-weight: 700;
+}
+
+.sub-footer .inner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 104px;
+  padding: 0 32px;
+}
+
+.sub-footer .inner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 32px;
+  left: 32px;
+  height: 1px;
+  background-color: #e1e1e1;
+}
+
+.sub-footer .info-wrap {
+  display: flex;
+}
+
+.sub-footer .info-wrap address {
+  margin: 0 50px 0 0;
+  font-size: 14px;
+  font-family: var(--font-M_PLUS_1p);
+  font-weight: 400;
+}
+
+.sub-footer .info-wrap strong {
+  font-size: 14px;
+}
+
+.sub-footer .family {
+  display: flex;
+}
+
+.sub-footer .drop-down {
+  margin: 0 40px 0 0;
+}
+
+.sub-footer .drop-down .btn {
+  position: relative;
+  padding: 0 14px 0 0;
+  font-size: 14px;
+  font-family: var(--font-M_PLUS_1p);
+  font-weight: 400;
+}
+
+.sub-footer .drop-down .btn::after {
+  content: '';
+  width: 6px; /* 사이즈 */
+  height: 6px; /* 사이즈 */
+  border-top: 1px solid #121212; /* 선 두께 */
+  border-right: 1px solid #121212; /* 선 두께 */
+  display: inline-block;
+  transform: rotate(135deg); /* 각도 */
+  position: absolute;
+  top: 6px; /* 기본 0px 값으로 해주세요 */
+  right: 0; /* 기본 0px 값으로 해주세요 */
+}
+
+.sub-footer .language-wrap {
+  display: none;
+}
+
+.sub-footer .sns-icon-list {
+  display: flex;
+}
+
+.sub-footer .sns-icon-list li {
+  background-image: url('../image/icon_sns.png');
+  background-repeat: no-repeat;
+  background-size: 122px 26px;
+  width: 100%;
+  height: 26px;
+  margin: 0 20px 0 0;
+}
+
+.sub-footer .sns-icon-list li:last-child {
+  margin: 0;
+}
+
+.sub-footer .sns-icon-list .instagram {
+  width: 24px;
+  background-position: 1px 0;
+}
+
+.sub-footer .sns-icon-list .facebook {
+  width: 27px;
+  background-position: -29px 0;
+}
+
+.sub-footer .sns-icon-list .linkedin {
+  width: 28px;
+  background-position: -62px 0;
+}
+
+.sub-footer .sns-icon-list .youtube {
+  width: 27px;
+  background-position: -96px 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* 320px ~ 1280px */
+@media all and (min-width: 320px) and (max-width: 1280px) {
+  .sub-header .gnb {display: none;}
+  .sub-container .title {font-size: 40px;}
+  .sub-header .util {width: 58px;}
+  .sub-header .util::after {content: none;}
+  .sub-header .util .language {display: none;}
+  .sub-header .util .search-btn {width: 18px; height: 18px;}
+  .sub-header .mobile-util {position: relative; display: block; width: 24px;}
+  .sub-header .mobile-util .menu {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 18px;}
+  .sub-header .mobile-util .line {display: block; width: 100%; height: 2px; margin: 0 0 8px 0; background-color: #000;}
+  .sub-header .mobile-util .line:last-child {margin: 0;}
+  .sub-footer .inner {justify-content: center; align-items: flex-start; flex-direction: column-reverse; height: 206px;}
+  .sub-footer .family {justify-content: flex-end; flex-direction: column-reverse; margin: 0 0 30px 0;}
+  .sub-header .util .language {position: relative; padding: 0 10px 0 28px; font-size: 14px; font-family: var(--font-M_PLUS_1p); font-weight: 500;}
+  .sub-header .util .language::before {content: ''; position: absolute; top: 0; left: 0; background: url('../image/icon_b.png') no-repeat; background-size: cover; width: 24px; height: 24px;}
+  .sub-header .util .language::after {content: ''; position: absolute; top: 50%; right: 0; transform: translate(0, -50%); background: url('../image/icon_arr.png') no-repeat; background-size: cover; width: 5px; height: 3px;}
+  .sub-footer .info-wrap {justify-content: flex-end; flex-direction: column-reverse;}
+  .sub-footer .info-wrap strong {margin: 0 0 12px 0;}
+  .sub-footer .sns-icon {margin: 0 0 20px 0;}
+  .sub-footer .sns-icon-list {width: 186px; justify-content: space-between;}
+  .sub-footer .drop-down {display: flex; justify-content: space-between; width: 207px; margin: 0;}
+  .sub-footer .language-wrap {display: block;}
+  .sub-footer .util .language {position: relative; padding: 0 10px 0 28px; font-size: 14px; font-family: var(--font-M_PLUS_1p); font-weight: 500;}
+  .sub-footer .util .language::before {content: ''; position: absolute; top: 50%; left: 0; transform: translate(0, -50%); background: url('../image/icon_b.png') no-repeat; background-size: cover; width: 16px; height: 16px;}
+  .sub-footer .util .language::after {content: ''; position: absolute; top: 50%; right: 0; transform: translate(0, -50%); background: url('../image/icon_arr.png') no-repeat; background-size: cover; width: 5px; height: 3px;}
+}
