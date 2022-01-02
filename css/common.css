@@ -113,6 +113,41 @@
   font-weight: 700;
 }
 
+.sub-container .tab-list {
+  display: flex;
+  justify-content: space-between;
+  width: 890px;
+}
+
+.sub-container .tab-item .btn {
+  font-size: 20px;
+  font-family: var(--font-M_PLUS_1p);
+  color: #9fa0a1;
+}
+
+.sub-container .tab-item .btn:hover {
+  color: #08b33b;
+}
+
+.sub-container .tab-item.on .btn {
+  color: #08b33b;
+}
+
+.sub-container .more-btn {
+  background-image: url('../image/icon_more.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -56px 0;
+  width: 56px;
+  height: 56px;
+  display: block;
+  margin: 0 auto;
+}
+
+.sub-container .more-btn:hover {
+  background-position: 0 0;
+}
+
 .sub-footer .inner {
   position: relative;
   display: flex;
