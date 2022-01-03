@@ -35,10 +35,6 @@
   overflow: hidden;
 }
 
-.people .visual .title {
-  margin: 0 0 16px 0;
-}
-
 .people .contents-list {
   display: flex;
   flex-wrap: wrap;
@@ -93,7 +89,7 @@
 
 /* 768px ~ 1280px */
 @media all and (min-width: 768px) and (max-width: 1280px) {
-  .people .visual .inner {height: 154px;}
+  .people .visual .inner {height: auto; display: block; padding: 24px 32px;}
   .people .contents-list a {width: auto;margin: 0 32px;}
   .people .contents-list li {width: 33.3%;margin: 0 0 60px 0;}
   .people .txt-box .txt {font-size: 16px;}
@@ -104,7 +100,7 @@
 
 /* 320px ~ 767px */
 @media all and (min-width: 320px) and (max-width: 767px) {
-  .people .visual .inner {height: 154px;}
+  .people .visual .inner {height: auto; display: block; padding: 24px 32px;}
   .people .contents-list a {width: auto;margin: 0 16px;}
   .people .contents-list li {width: 50%;margin: 0 0 32px 0;}
   .people .txt-box .txt {font-size: 16px;}
