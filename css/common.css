@@ -171,17 +171,17 @@
   width: 890px;
 }
 
-.sub-container .tab-item .txt {
+.sub-container .tab-item a {
   font-size: 18px;
   font-family: var(--font-M_PLUS_1p);
   color: #9fa0a1;
 }
 
-.sub-container .tab-item.on .txt {
+.sub-container .tab-item.on a {
   color: #08b33b;
 }
 
-.sub-container .tab-item .txt:hover {
+.sub-container .tab-item a:hover {
   color: #08b33b;
 }
 
