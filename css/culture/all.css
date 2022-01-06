@@ -1,0 +1,307 @@
+@charset "utf-8";
+
+.culture .visual .inner {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: 264px;
+}
+
+.map-wrap {
+  position: relative;
+}
+
+.map-wrap::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 1px;
+  background-color: #ddd;
+}
+
+.map-wrap .map-btn {
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translate(-50%, -9px);
+  padding: 0 14px 0 0;
+  font-size: 12px;
+}
+
+.map-wrap .map-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  width: 0px;
+  height: 0px;
+  /* border-top: 4px solid none; */
+  border-bottom: 4px solid #000;
+  border-right: 4px solid transparent;
+  border-left: 4px solid  transparent;
+}
+
+.map-wrap .map-btn::after {
+  content: '';
+  background-image: url('../../image/map_onoff_btn.png');
+  background-repeat: no-repeat;
+  background-size: 150px;
+  width: 150px;
+  height: 35px;
+  display: block;
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #fff;
+  z-index: -1;
+}
+
+.map-wrap .map-contents {
+  position: relative;
+  padding: 0 0 30px 0;
+}
+
+.map-wrap .map-photo img {
+  width: 100%;
+}
+
+.map-wrap .map-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map-wrap .map-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 45px;
+  height: 45px;
+}
+
+.map-wrap .map-item a {
+  height: 100%;
+}
+
+.map-wrap .map-item .icon {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-image: url('../../image/culture_map_icon.png');
+  background-repeat: no-repeat;
+  background-size: 253px 230px;
+  background-position: -217px -163px;
+  width: 14px;
+	height: 14px;
+}
+
+.map-wrap .map-item .icon::after {
+  content: '';
+  position: absolute;
+  background-image: url('../../image/culture_map_icon.png');
+  background-repeat: no-repeat;
+  background-size: 253px 230px;
+  width: 37px;
+	height: 45px;
+}
+
+.map-wrap .icon-txt {
+  position: absolute;
+  font-size: 11px;
+  color: #08b33b;
+}
+
+.map-wrap .Bangkok {top: 206px; left: 141px;}
+.map-wrap .Bangkok .icon::after {bottom: 2px; left: -10px; background-position: -161px -68px;}
+.map-wrap .Bangkok .icon-txt {bottom: -10px; left: -30px;}
+
+.map-wrap .Bundang {top: 40px; left: 358px; z-index: 1;}
+.map-wrap .Bundang .icon::after {bottom: 2px; left: -10px; background-position: -110px -9px;}
+.map-wrap .Bundang .icon-txt {bottom: 0; right: -34px;}
+
+.map-wrap .Dalian {top: -6px; left: 306px;}
+.map-wrap .Dalian .icon::after {bottom: 2px; left: -10px; background-position: -8px -68px;}
+.map-wrap .Dalian .icon-txt {bottom: 0; left: -20px;}
+
+.map-wrap .Fukuoka {top: 80px; left: 376px;}
+.map-wrap .Fukuoka .icon::after {bottom: 2px; left: -10px; background-position: -59px -68px;}
+.map-wrap .Fukuoka .icon-txt {bottom: -8px; right: -32px;}
+
+.map-wrap .Hong-Kong {top: 160px; left: 252px;}
+.map-wrap .Hong-Kong .icon::after {bottom: 2px; left: -10px; background-position: -110px -68px;}
+.map-wrap .Hong-Kong .icon-txt {bottom: 0; left: -45px;}
+
+.map-wrap .Jakarta {top: 378px; left: 162px;}
+.map-wrap .Jakarta .icon::after {bottom: 2px; left: -10px; background-position: -161px -9px;}
+.map-wrap .Jakarta .icon-txt {bottom: 0; left: -28px;}
+
+.map-wrap .Kyoto {top: 60px; left: 416px;}
+.map-wrap .Kyoto .icon::after {bottom: 2px; left: -10px; background-position: -8px -9px;}
+.map-wrap .Kyoto .icon-txt {bottom: -5px; right: -18px;}
+
+.map-wrap .New-York {top: 87px; left: 1013px;}
+.map-wrap .New-York .icon::after {bottom: 2px; left: -10px; background-position: -8px -128px;}
+.map-wrap .New-York .icon-txt {bottom: -6px; right: -34px;}
+
+.map-wrap .Palo-Alto {top: 45px; left: 645px;}
+.map-wrap .Palo-Alto .icon::after {bottom: 2px; left: -10px; background-position: -59px -128px;}
+.map-wrap .Palo-Alto .icon-txt {bottom: -6px; right: -34px;}
+
+.map-wrap .Seoul {top: 22px; left: 350px; z-index: 0;}
+.map-wrap .Seoul .icon::after {bottom: 2px; left: -10px; background-position: -110px -128px;}
+.map-wrap .Seoul .icon-txt {bottom: -6px; left: -14px;}
+
+.map-wrap .Shanghai {top: 81px; left: 310px;}
+.map-wrap .Shanghai .icon::after {bottom: 2px; left: -10px; background-position: -161px -128px;}
+.map-wrap .Shanghai .icon-txt {bottom: -6px; left: -34px;}
+
+.map-wrap .Taipei {top: 136px; left: 310px;}
+.map-wrap .Taipei .icon::after {bottom: 2px; left: -10px; background-position: -212px -9px;}
+.map-wrap .Taipei .icon-txt {bottom: -6px; right: -18px;}
+
+.map-wrap .Tokyo {top: 50px; left: 447px;}
+.map-wrap .Tokyo .icon::after {bottom: 2px; left: -10px; background-position: -59px -9px;}
+.map-wrap .Tokyo .icon-txt {bottom: -6px; right: -18px;}
+
+.post .inner {
+  max-width: 1232px;
+  margin: 0 auto;
+}
+
+.post .contents {
+  padding: 108px 0;
+}
+
+.post .post-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post .post-list li {
+  width: calc(33.33% - 32px);
+}
+
+.post .post-list img {
+  width: 100%;
+}
+
+.post .txt-box p {
+  display: -webkit-box;
+  white-space: normal;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: #616161;
+}
+
+.post .post-list .post-item {
+  margin: 0 16px 80px 16px;
+}
+
+.post .txt-box {
+  width: auto;
+  margin: 20px 0 0 0;
+}
+
+.post .txt-box .tit {
+  display: block;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+}
+
+.post .post-list .first {
+  position: relative;
+  width: 100%;
+  margin: 0 16px 80px 16px;
+}
+
+.post .post-list .first::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 3px;
+  background-color: #000;
+}
+
+.post .post-list .first::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 380px;
+  height: 2px;
+  background-color: #e1e1e1;
+}
+
+.post .first .link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post .first .thumbnail {
+  width: 790px;
+}
+
+.post .first .txt-box {
+  width: 380px;
+}
+
+.post .first .tit {
+  font-size: 40px;
+  width: 279px;
+}
+
+
+
+
+
+
+
+
+
+
+/* 768px ~ 1280px */
+@media all and (min-width: 768px) and (max-width: 1280px) {
+  .culture .visual .inner {height: auto; padding: 24px 32px;}
+  .map-wrap {display: none;}
+  .post .contents {padding: initial;}
+  .post .post-list {margin: 0 0 20px 0;}
+  .post .post-list .post-item {position: static; width: auto; margin: 0 0 40px 0;}
+  .post .post-list .first::after {content: none;}
+  .post .post-list .first::before {content: none;}
+  .post .first .link {display: initial; justify-content: initial; align-items: initial; margin: 0 0 40px 0;}
+  .post .first .thumbnail {width: auto;}
+  .post .first .txt-box {width: auto;}
+  .post .txt-box .tit {font-size: 24px; width: initial; margin: 0 0 20px 0;}
+  .post .txt-box .tit-desc {font-size: 14px; line-height: 22px;}
+  .post .more-btn {display: none;}
+}
+
+/* 320px ~ 767px */
+@media all and (min-width: 320px) and (max-width: 767px) {
+  .culture .visual .inner {height: auto; padding: 24px 32px;}
+  .map-wrap {display: none;}
+  .post .contents {padding: initial;}
+  .post .post-list {margin: 0 0 20px 0;}
+  .post .post-list .post-item {position: static; width: auto; margin: 0 0 40px 0;}
+  .post .post-list .first::after {content: none;}
+  .post .post-list .first::before {content: none;}
+  .post .first .link {display: initial; justify-content: initial; align-items: initial; margin: 0 0 40px 0;}
+  .post .first .thumbnail {width: auto;}
+  .post .first .txt-box {width: auto;}
+  .post .txt-box .tit {font-size: 24px; width: initial; margin: 0 0 20px 0;}
+  .post .txt-box .tit-desc {font-size: 14px; line-height: 22px;}
+  .post .more-btn {display: none;}
+}
