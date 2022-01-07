@@ -20,6 +20,7 @@
   right: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.95);
+  z-index: 100;
 }
 
 .sub-header .contents {
@@ -223,7 +224,6 @@
   left: 0;
   transform: translate(0, -50%);
   display: block;
-
 }
 
 .tab-btn .tab-item a:hover {
