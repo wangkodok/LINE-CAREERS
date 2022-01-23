@@ -1,0 +1,405 @@
+@charset "utf-8";
+
+.jobs.open {
+  position: relative;
+}
+
+.jobs .visual {
+  position: relative;
+}
+
+.jobs .visual::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  background-color: #e1e1e1;
+}
+
+.jobs .visual .inner {
+  display: flex;
+  align-items: center;
+  height: 264px;
+  overflow: hidden;
+}
+
+.jobs-contents.open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.jobs-contents .inner.open {
+  height: 100%;
+}
+
+.jobs-contents .contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 68px 0 40px 0;
+}
+
+.jobs-contents .contents.open {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.jobs-contents .contents .rsp-btn {
+  display: none;
+}
+
+.filters {
+  width: 288px;
+  height: calc(100vh - 88px);
+}
+
+.filters .scroll {
+  height: calc(100% - 144px);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.filters .scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.filters .wrap-tit {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 36px 0;
+}
+
+.filters .wrap-tit .tit {
+  font-size: 20px;
+}
+
+.filters .wrap-tit .btn {
+  padding: 0 10px;
+  border: 1px solid #e1e1e1;
+  font-size: 12px;
+}
+  
+.filters .filters-list .tit {
+  display: block;
+  margin: 0 0 16px 0;
+}
+
+.filters .detail-list {
+  max-height: 200px;
+  overflow-x: hidden;
+}
+
+.filters .detail-list li {
+  margin: 0 0 12px 0;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  left: -3000%;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+  font-size: 15px;
+  font-family: var(--font-M_PLUS_1p);
+  font-weight: 400;
+  color: #777;
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e5e5e5;
+  position: relative;
+  top: 4px;
+  margin: 0 10px 0 0;
+  /* transition: all 0.5s ease; */
+}
+
+input[type="checkbox"] + label:hover::before { /* label 태그 마우스 오버하면 나타나는 코드 */
+  background-color: #f1f1f1;
+}
+
+input[type="checkbox"]:checked + label::before { /* 버튼 스타일 */
+  border: 1px solid #08b33b;
+}
+
+input[type="checkbox"]:checked + label:hover::before { /* label 태그 마우스 오버하면 나타나는 코드 */
+  background-color: #fff;
+}
+
+input[type="checkbox"]:checked + label::after { /* 버튼 스타일 안에 체크 화살표 이미지 등 넣는 스타일 */
+  content: '';
+  background-image: url('../../image/icon.png');
+  transform: translate(0, -50%);
+  background-position: -76px -57px;
+  background-repeat: no-repeat;
+  background-size: 96px 68px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 13px;
+  height: 10px;
+  /* transition: all 0.5s ease 0.7s; */
+}
+
+.filters .apply-btn {
+  display: none;
+}
+
+.filters .close-btn {
+  display: none;
+}
+
+.job-posting {
+  width: 864px;
+}
+
+.job-posting .job-count {
+  font-size: 20px;
+  font-weight: 700;
+  color: #08b33b;
+}
+
+.job-posting span {}
+
+.job-posting .count {}
+
+.job-posting .content-wrap {
+  padding: 0 0 40px 0;
+}
+
+.job-posting .job-list {}
+
+.job-posting .job-list li {}
+
+.job-posting .job-list a {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.job-posting .job-list a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #eee;
+}
+
+.job-posting .job-tit {}
+
+.job-posting .job-tit .tit {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.job-posting .job-tit .list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 12px 0 0 0;
+}
+
+.job-posting .job-tit .item {
+  position: relative;
+  margin: 0 10px 0 0;
+  padding: 0 10px 0 0;
+  font-size: 14px;
+  font-weight: 300;
+  color: #616161;
+}
+
+.job-posting .job-tit .item::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+  width: 1px;
+  height: 12px;
+  background-color: #616161;
+}
+
+.job-posting .job-tit .item:last-child::after {
+  content: none; 
+}
+
+.job-posting .job-list .date {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  color: #616161;
+}
+
+
+
+
+
+
+
+
+
+
+/* 768px ~ 1280px */
+@media all and (min-width: 768px) and (max-width: 1280px) {
+  .jobs .visual .inner {height: auto; display: block; padding: 24px 32px;}
+  .jobs .contents-list a {width: auto;margin: 0 32px;}
+  .jobs .contents-list li {width: 33.3%;margin: 0 0 60px 0;}
+  .jobs .txt-box .txt {font-size: 16px;}
+  .jobs .txt-box .txt-desc {font-size: 14px;}
+  .jobs-contents .inner {padding: 24px 32px;}
+  .jobs-contents .more-btn {display: none;}
+
+  .jobs-contents .contents {position: relative; padding: initial;}
+  .jobs-contents .contents.open {
+    position: absolute;
+    padding: initial;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .jobs-contents .contents .rsp-btn {position: absolute; top: -5px; right: 0; display: block; padding: 0 12px; border: 1px solid #000;}
+  .filters {display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: auto; height: 100%; background-color: #fff; z-index: 101; overflow: auto; padding: 105px 20px 100px;}
+  .filters.open {display: block; position: relative;}
+  .filters .scroll {height: auto;}
+  .filters .wrap-tit {margin: 0 0 8px 0;}
+  .filters .filters-list .filters-item {position: relative;}
+  .filters .filters-list .filters-item::after {content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background-color: #ddd;}
+  .filters .filters-list .tit {position: relative; margin: initial; height: 64px; display: flex; align-items: center;}
+  .filters .filters-list .tit::after {
+    content: '';
+    width: 6px; /* 사이즈 */
+    height: 6px; /* 사이즈 */
+    border-top: 2px solid #121212; /* 선 두께 */
+    border-right: 2px solid #121212; /* 선 두께 */
+    display: inline-block;
+    transform: rotate(135deg); /* 각도 */
+    position: absolute;
+    top: calc(50% - 3px); /* 기본 0px 값으로 해주세요 */
+    right: 8px; /* 기본 0px 값으로 해주세요 */
+    transform: rotate(135deg) translate(-50%, 0%);
+  }
+
+  .filters .detail-list {display: none;}
+  .filters .apply-btn {display: block; position: fixed; bottom: 0; left: 0; z-index: 1; width: 100%; height: 68px; font-size: 18px; font-weight: 700; color: #fff; background-color: #08b33b;}
+  .filters .close-btn {display: block; position: absolute; top: 24px; right: 20px; height: auto;}
+  .close-btn .line-box {
+    position: relative;
+    width: 20px; /* X 사이즈 */
+    height: 20px; /* X 사이즈 */
+  }
+  
+  .close-btn .line-box > span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  
+  .close-btn .line-01 {
+    transform: rotate(135deg) translateX(0%);
+  }
+  
+  .close-btn .line-02 {
+    transform: rotate(45deg) translateX(0%);
+  }
+  .job-posting {width: 100%;}
+  .job-posting.open {display: none;}
+  .job-posting .job-count {font-size: 14px;}
+  .job-posting .job-list {margin: 8px 0 0 0;}
+  .job-posting .job-list a {display: block; padding: 24px 0;}
+  .job-posting .job-tit .tit {font-size: 22px; font-weight: 400;}
+}
+
+/* 320px ~ 767px */
+@media all and (min-width: 320px) and (max-width: 767px) {
+  .jobs .visual .inner {height: auto; display: block; padding: 24px 32px;}
+  .jobs .contents-list a {width: auto;margin: 0 16px;}
+  .jobs .contents-list li {width: 50%;margin: 0 0 32px 0;}
+  .jobs .txt-box .txt {font-size: 16px;}
+  .jobs .txt-box .txt-desc {font-size: 14px;}
+  .jobs-contents .inner {padding: 24px 32px;}
+  .jobs-contents .more-btn {display: none;}
+
+  .jobs-contents .contents {position: relative; padding: initial;}
+  .jobs-contents .contents.open {
+    position: absolute;
+    padding: initial;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .jobs-contents .contents .rsp-btn {position: absolute; top: -5px; right: 0; display: block; padding: 0 12px; border: 1px solid #000;}
+  .filters {display: none; position: fixed; top: 0; right: 0; bottom: 0; left: 0; width: auto; height: 100%; background-color: #fff; z-index: 101; overflow: auto; padding: 105px 20px 100px;}
+  .filters.open {display: block; position: relative;}
+  .filters .scroll {height: auto;}
+  .filters .wrap-tit {margin: 0 0 8px 0;}
+  .filters .filters-list .filters-item {position: relative;}
+  .filters .filters-list .filters-item::after {content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 1px; background-color: #ddd;}
+  .filters .filters-list .tit {position: relative; margin: initial; height: 64px; display: flex; align-items: center;}
+  .filters .filters-list .tit::after {
+    content: '';
+    width: 6px; /* 사이즈 */
+    height: 6px; /* 사이즈 */
+    border-top: 2px solid #121212; /* 선 두께 */
+    border-right: 2px solid #121212; /* 선 두께 */
+    display: inline-block;
+    transform: rotate(135deg); /* 각도 */
+    position: absolute;
+    top: calc(50% - 3px); /* 기본 0px 값으로 해주세요 */
+    right: 8px; /* 기본 0px 값으로 해주세요 */
+    transform: rotate(135deg) translate(-50%, 0%);
+  }
+
+  .filters .detail-list {display: none;}
+  .filters .apply-btn {display: block; position: fixed; bottom: 0; left: 0; z-index: 1; width: 100%; height: 68px; font-size: 18px; font-weight: 700; color: #fff; background-color: #08b33b;}
+  .filters .close-btn {display: block; position: absolute; top: 24px; right: 20px; height: auto;}
+  .close-btn .line-box {
+    position: relative;
+    width: 20px; /* X 사이즈 */
+    height: 20px; /* X 사이즈 */
+  }
+  
+  .close-btn .line-box > span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+  }
+  
+  .close-btn .line-01 {
+    transform: rotate(135deg) translateX(0%);
+  }
+  
+  .close-btn .line-02 {
+    transform: rotate(45deg) translateX(0%);
+  }
+
+  .job-posting {width: 100%;}
+  .job-posting.open {display: none;}
+  .job-posting .job-count {font-size: 14px;}
+  .job-posting .job-list {margin: 8px 0 0 0;}
+  .job-posting .job-list a {display: block; padding: 24px 0;}
+  .job-posting .job-tit .tit {font-size: 22px; font-weight: 400;}
+}
