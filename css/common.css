@@ -341,6 +341,10 @@
   color: #fff;
 }
 
+select {
+  display: none;
+}
+    
 .sub-footer .inner {
   position: relative;
   display: flex;
@@ -472,6 +476,20 @@
   .tab-btn .tab-list {width: auto; flex-wrap: initial; justify-content: initial; white-space: nowrap;}
   .sub-container .bot-banner .bg {height: auto;}
   .sub-container .bot-banner .inner {padding: 32px;}
+  select {
+    display: block;
+    width: 140px;
+    padding: 10px;
+    border: 1px solid #e1e1e1;
+    background-image: url('../image/icon_arr.png');
+    background-repeat: no-repeat;
+    background-position: center right 14px;
+    font-size: 14px;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
   .sub-footer .inner {justify-content: center; align-items: flex-start; flex-direction: column-reverse; height: 206px;}
   .sub-footer .family {justify-content: flex-end; flex-direction: column-reverse; margin: 0 0 30px 0;}
   .sub-footer .info-wrap {justify-content: flex-end; flex-direction: column-reverse;}
