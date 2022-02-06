@@ -6,6 +6,7 @@
 
 .wrap {
   letter-spacing: -0.2px;
+  overflow: hidden;
 }
 
 .wrap .inner {
@@ -533,6 +534,19 @@
 
 select {
   display: none;
+}
+
+/* 스크롤 css 제어 */
+.main-container .post, 
+.main-container .profile {
+  transform: translate(0, 200px);
+  transition: all 1.5s ease;
+  opacity: 0;
+}
+
+.main-container .scroll-js {
+  transform: translate(0, 0);
+  opacity: 1;
 }
     
 .sub-footer .inner {
