@@ -61,9 +61,53 @@ video {
   margin: 0 0 52px 0;
 }
 
+.visual .text-box .title-tit {
+  display: block;
+  opacity: 0;
+  transform: translate(0, 100%);
+}
+
+.visual .text-box.on .title-tit:nth-child(1)  {
+  animation-name: motion;
+  animation-delay: 0.1s;
+  animation-duration: 0.9s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+.visual .text-box.on .title-tit:nth-child(2)  {
+  animation-name: motion;
+  animation-delay: 0.3s;
+  animation-duration: 0.9s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
+}
+
+@keyframes motion {
+  from {
+    opacity: 0;
+    transform: translate(0, 100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
 .visual .text-list {
   display: flex;
   align-items: center;
+  opacity: 0;
+  transform: translate(0, 100%);
+}
+
+.visual .text-box.on .text-list {
+  animation-name: motion;
+  animation-delay: 0.5s;
+  animation-duration: 0.9s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-out;
 }
 
 .visual .text-list .list {

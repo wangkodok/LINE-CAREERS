@@ -1,6 +1,12 @@
 window.addEventListener('load', () => {
-
+  visual();
 });
+
+// 비주얼 텍스트
+function visual() {
+  const visualTitle = document.querySelector('.visual .text-box');
+  visualTitle.classList.add('on');
+}
 
 // 스크롤시 헤더 스타일 변경
 function headerScroll() {
