@@ -131,7 +131,9 @@ video {
 }
 
 .visual .text-list .item {
+  position: relative;
   width: 33%;
+  margin: 0 34px 0 0;
 }
 
 .visual .text-list .txt {
@@ -139,7 +141,6 @@ video {
   line-height: 50px;
   font-size: 18px;
   color: #fff;
-  margin: 0 24px 0 0;
 }
 
 .visual .text-list .txt::after {
@@ -152,7 +153,51 @@ video {
   transform: translate(0, -50%) rotate(135deg);
   position: absolute;
   top: calc(50% - 6px);
-  right: 24px;
+  right: -4px;
+}
+
+.visual .text-list-lnb {
+  position: absolute;
+  top: 80px;
+  right: 0;
+  left: 0;
+  max-height: 224px;
+  overflow: auto;
+  transition: all 0.5s ease;
+  transform: translate(0px, -100%);
+  visibility: hidden;
+  opacity: 0;
+  z-index: -1;
+}
+
+.visual .text-list-lnb.on {
+  transform: translate(0px, 0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.visual .text-list-lnb::-webkit-scrollbar {
+  width: 3px; /* 스크롤바의 너비 */
+}
+
+.visual .text-list-lnb::-webkit-scrollbar-thumb {
+  background-color: #fff; /* 스크롤바의 색상 */
+}
+
+.visual .text-list-lnb::-webkit-scrollbar-track {
+  background-color: transparent; /* 스크롤바 트랙 색상 */
+}
+
+.visual .text-list-lnb a {
+  display: inline-block;
+  color: #fff;
+  padding: 4px 0;
+  white-space: nowrap;
+  transition: all 0.5s ease;
+}
+
+.visual .text-list-lnb a:hover {
+  color: #07b53b;
 }
 
 .post .contents {
