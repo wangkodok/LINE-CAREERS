@@ -119,6 +119,7 @@
   font-family: var(--font-M_PLUS_1p);
   font-weight: 500;
   color: #fff;
+  transition: all 0.3s ease-out;
 }
 
 .main-header .util .language::before {
@@ -130,6 +131,7 @@
   background-size: cover;
   width: 24px;
   height: 24px;
+  transition: all 0.3s ease-out;
 }
 
 .main-header .util .language::after {
@@ -142,6 +144,43 @@
   background-size: cover;
   width: 5px;
   height: 3px;
+  transition: all 0.3s ease-out;
+}
+
+.main-header .util .language:hover,
+.main-header .util .language:hover::before,
+.main-header .util .language:hover::after {
+  opacity: 0.6;
+}
+
+.main-header .util .language-change {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 72px;
+  border: 1px solid #fff;
+  padding: 14px 0;
+  color: #fff;
+}
+
+.main-header .util .language-change.on {
+  display: block;
+}
+
+.main-header .util .change-item + .change-item {
+  margin: 8px 0 0 0;
+}
+
+.main-header .util .change-btn {
+  display: block;
+  font-size: 14px;
+  width: 100%;
+  color: #fff;
+}
+
+.main-header .util .change-btn:hover {
+  opacity: 0.6;
 }
 
 .main-header .util .search-btn {
@@ -331,6 +370,44 @@
   background-size: cover;
   width: 5px;
   height: 3px;
+}
+
+.sub-header .util .language:hover,
+.sub-header .util .language:hover::before,
+.sub-header .util .language:hover::after {
+  opacity: 0.6;
+}
+
+.sub-header .util .language-change {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 72px;
+  border: 1px solid #000;
+  padding: 14px 0;
+  color: #000;
+  background-color: #fff;
+  transition: all 0.5s ease;
+}
+
+.sub-header .util .language-change.on {
+  display: block;
+}
+
+.sub-header .util .change-item + .change-item {
+  margin: 8px 0 0 0;
+}
+
+.sub-header .util .change-btn {
+  display: block;
+  font-size: 14px;
+  width: 100%;
+  color: #000;
+}
+
+.sub-header .util .change-btn:hover {
+  opacity: 0.6;
 }
 
 .sub-header .util .search-btn {

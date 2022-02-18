@@ -1,6 +1,20 @@
 window.addEventListener('load', () => {
   stopRefreshing();
+  language();
 });
+
+// 페이지 언어 변경
+function language() {
+  const languageChange = document.querySelector('.language');
+  languageChange.addEventListener('click', (e)=> {
+    let target = e.target;
+    if (target.nextSibling.nextSibling.className === 'language-change') {
+      languageChange.nextSibling.nextSibling.classList.add('on');
+    } else {
+      languageChange.nextSibling.nextSibling.classList.remove('on');
+    }
+  })
+}
 
 // 스크롤 인터랙션
 function scrollInteraction() {
