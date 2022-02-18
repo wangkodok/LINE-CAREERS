@@ -16,6 +16,21 @@ function visual() {
         textListLnb(e);
       });
 
+      // 아무 곳이나 클릭해서 클래스 on 전체 제거
+      window.addEventListener('click', (e) => {
+        let tag;
+        function tagCheck() {
+          while (tag !== 'HTML') {
+            if (e.target.tagName !== 'A') {
+              tag = e.target.parentNode;
+              listText[i].nextSibling.nextSibling.classList.remove('on');
+            }
+            return;
+          }
+        }
+        tagCheck();
+      });
+
       // 클래스 on 추가/제거
       function textListLnb(e) {
         let lnbClassName = e.target.parentNode.querySelector('.text-list-lnb');
