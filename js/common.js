@@ -14,6 +14,21 @@ function language() {
       languageChange.nextSibling.nextSibling.classList.remove('on');
     }
   })
+  
+  // 아무 곳이나 클릭해서 클래스 on 전체 제거
+  window.addEventListener('click', (e) => {
+    let tag;
+    function tagCheck() {
+      while (tag !== 'HTML') {
+        if (e.target.tagName !== 'BUTTON') {
+          tag = e.target.parentNode;
+          languageChange.nextSibling.nextSibling.classList.remove('on');
+        }
+        return;
+      }
+    }
+    tagCheck();
+  });
 }
 
 // 스크롤 인터랙션
