@@ -428,6 +428,12 @@ video {
   .visual .text-list .item::after {content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 2px; background-color: #fff;}
   .visual .text-list .txt {margin: initial;}
   .visual .text-list .txt::after {right: 6px;}
+  .visual .text-list-lnb {background-color: #fff; top: 100%; z-index: 1;}
+  .visual .text-list-lnb li {margin: 0 0 4px 0;}
+  .visual .text-list-lnb a {display: block; color: #000; padding: 4px 0 4px 14px;}
+  .visual .text-list-lnb::-webkit-scrollbar {width: 6px; /* 스크롤바의 너비 */}
+  .visual .text-list-lnb::-webkit-scrollbar-thumb {background-color: #07b53b; /* 스크롤바의 색상 */}
+  .visual .text-list-lnb::-webkit-scrollbar-track {background-color: transparent; /* 스크롤바 트랙 색상 */}
 
   .post .title {font-size: 36px;}
   .post .list .item {width: initial;}
@@ -454,6 +460,12 @@ video {
   .visual .text-list .item::after {content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 2px; background-color: #fff;}
   .visual .text-list .txt {margin: initial;}
   .visual .text-list .txt::after {right: 6px;}
+  .visual .text-list-lnb {background-color: #fff; top: 100%; z-index: 1;}
+  .visual .text-list-lnb li {margin: 0 0 4px 0;}
+  .visual .text-list-lnb a {display: block; color: #000; padding: 4px 0 4px 14px;}
+  .visual .text-list-lnb::-webkit-scrollbar {width: 6px; /* 스크롤바의 너비 */}
+  .visual .text-list-lnb::-webkit-scrollbar-thumb {background-color: #07b53b; /* 스크롤바의 색상 */}
+  .visual .text-list-lnb::-webkit-scrollbar-track {background-color: transparent; /* 스크롤바 트랙 색상 */}
 
   .post .title {font-size: 36px;}
   .post .list .item {width: initial;}
