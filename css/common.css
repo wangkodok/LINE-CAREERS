@@ -454,6 +454,71 @@
   color: #08b33b;
 }
 
+.util .search-bg {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.util .search-bg.on {
+  display: block;
+}
+
+.util .search-contetns {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 88px;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 32px;
+}
+
+.util .search-contetns .search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  height: 100%;
+}
+
+.util .search-contetns .search-bar {
+  position: relative;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 88px;
+  background-color: #fff;
+  width: 554px;
+  border: none;
+}
+
+.util .search-contetns .search-btn {
+  background: url('../image/icon_se.png') no-repeat;
+  background-size: cover;
+}
+
+.util .search-contetns input {
+  width: 550px;
+  border: none;
+  outline: none;
+}
+
+.util .search-contetns .close {
+  background-image: url('../image/bg_image.png');
+  background-repeat: no-repeat;
+  background-position: -86px -130px;
+  background-size: 418px 264px;
+  width: 24px;
+  height: 24px;
+}
+
 .tab-btn .tab-list {
   width: 1069px;
   flex-wrap: wrap;
