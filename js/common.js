@@ -2,6 +2,7 @@ window.addEventListener('load', () => {
   stopRefreshing();
   language();
   searchBar();
+  searchBar();
 });
 
 // 페이지 언어 변경
@@ -38,6 +39,7 @@ function searchBar() {
   const headerLogoImg = document.querySelector('header .logo img');
   const headerUtil = document.querySelector('.util');
   const searchOn = document.querySelector('.util .search-bg');
+  const mobileUtil = document.querySelector('.mobile-util');
 
   headerUtil.addEventListener('click', (e) => {
     if (e.target.className !== 'search-btn' && e.target.className !== 'close') {
@@ -49,6 +51,9 @@ function searchBar() {
       headerLogoImg.src = '../../image/logo.png';
       headerLogoImg.style.position = 'relative';
       headerLogoImg.style.zIndex = 1;
+      headerLogoImg.style.display = '';
+      mobileUtil.style.display = '';
+
       window.addEventListener('scroll', () => {
         if (html.scrollTop === 0) {
           headerLogoImg.src = '../../image/logo.png';
@@ -58,8 +63,32 @@ function searchBar() {
           headerLogoImg.src = '../../image/logo.png';
         }
       });
+
+      if (window.innerWidth > 320 && window.innerWidth < 1280) {
+        headerLogoImg.style.display = 'none';
+        mobileUtil.style.display = 'none';
+      }
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 320 && window.innerWidth < 1280) {
+          headerLogoImg.style.display = 'none';
+          mobileUtil.style.display = 'none';
+        } else {
+          headerLogoImg.style.display = 'block';
+        }
+      });
     } else {
       searchOn.classList.remove('on');
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth < 320 && window.innerWidth > 1280) {
+          headerLogoImg.style.display = 'block';
+          mobileUtil.style.display = '';
+        }
+      });
+      headerLogoImg.style.display = '';
+      mobileUtil.style.display = '';
+
       window.addEventListener('scroll', () => {
         if (html.scrollTop === 0) {
           headerLogoImg.src = '../../image/logo_whtie.png';

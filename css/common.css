@@ -850,6 +850,8 @@ select {
     -moz-appearance: none;
     appearance: none;
   }
+  .util .search-contetns {padding: 0 16px;}
+  .util .search-contetns input {width: 78.571428%;}
   .sub-footer .inner {justify-content: center; align-items: flex-start; flex-direction: column-reverse; height: 206px;}
   .sub-footer .family {justify-content: flex-end; flex-direction: column-reverse; margin: 0 0 30px 0;}
   .sub-footer .info-wrap {justify-content: flex-end; flex-direction: column-reverse;}
