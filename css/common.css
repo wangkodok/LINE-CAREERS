@@ -199,14 +199,34 @@
   /* padding: 88px 0 0 0; */
 }
 
+.page-more-area {
+  position: relative;
+  width: 66px;
+  height: 65px;
+}
+
 .page-more {
   background-image: url('../image/bg_image.png');
   background-size: 332px;
   background-repeat: no-repeat;
   background-position: -257px -26px;
   display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 31px;
 	height: 25px;
+}
+
+.page-more.on {
+  background-position: -186px -6px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 66px;
+  height: 65px;
 }
 
 .page-scroll {

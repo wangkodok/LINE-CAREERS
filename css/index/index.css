@@ -114,7 +114,7 @@ video {
   position: relative;
   display: flex;
   width: 600px;
-  height: 50px;
+  height: 65px;
   margin: 0 24px 0 0;
   align-items: center;
   justify-content: space-between;
@@ -138,7 +138,7 @@ video {
 
 .visual .text-list .txt {
   position: relative;
-  line-height: 50px;
+  line-height: 65px;
   font-size: 18px;
   color: #fff;
 }
@@ -150,10 +150,16 @@ video {
   border-top: 2px solid #fff;
   border-right: 2px solid #fff;
   display: inline-block;
-  transform: translate(0, -50%) rotate(135deg);
+  transform: translate(0, 0) rotate(135deg);
+  transition: all 0.5s ease-out;
   position: absolute;
   top: calc(50% - 6px);
   right: -4px;
+}
+
+.visual .text-list .txt.on::after {
+  transform: translate(0, 0) rotate(-45deg);
+  top: calc(50% - 0px);
 }
 
 .visual .text-list-lnb {

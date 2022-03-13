@@ -34,11 +34,24 @@ function visual() {
       // 클래스 on 추가/제거
       function textListLnb(e) {
         let lnbClassName = e.target.parentNode.querySelector('.text-list-lnb');
+        let pageMore = document.querySelector('.page-more');
+        
+        lnbClassName.addEventListener('click', (e) => {
+          if (e.target) {
+            listText[i].textContent = e.target.textContent;
+            lnbClassName.classList.remove('on');
+            listText[i].classList.remove('on');
+            pageMore.classList.add('on');
+          }
+        });
+        
         if (lnbClassName.className === 'text-list-lnb') {
           classNameRemove();
           lnbClassName.classList.add('on');
+          listText[i].classList.add('on');
         } else {
           lnbClassName.classList.remove('on');
+          listText[i].classList.remove('on');
         }
       }
 
@@ -47,6 +60,7 @@ function visual() {
         for (let i = 0; i < listText.length; i++) {
           let target = listText[i].nextSibling.nextSibling;
           target.classList.remove('on');
+          listText[i].classList.remove('on');
         }
       }
     }
