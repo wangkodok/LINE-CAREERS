@@ -1,8 +1,7 @@
 window.addEventListener('load', () => {
   stopRefreshing();
   language();
-  searchBar();
-  searchBar();
+  headerSearchBar();
 });
 
 // 페이지 언어 변경
@@ -34,86 +33,26 @@ function language() {
 }
 
 // 검색 창
-function searchBar() {
+function headerSearchBar() {
   const html = document.querySelector('html');
-  const headerLogoImg = document.querySelector('header .logo img');
-  const headerUtil = document.querySelector('.util');
-  const searchOn = document.querySelector('.util .search-bg');
-  const mobileUtil = document.querySelector('.mobile-util');
+  const searchBg = document.querySelector('.util .search-bg');
+  const util = document.querySelector('header .util');
+  const searchBtn = document.querySelector('header .util .search-btn');
+  const searchClose = document.querySelector('.util .search-contetns .close');
 
-  headerUtil.addEventListener('click', (e) => {
-    if (e.target.className !== 'search-btn' && e.target.className !== 'close') {
-      return;
-    }
+  searchBtn.addEventListener('click', headerSearch);
+  function headerSearch() {
+    searchBg.classList.add('on');
+    searchBtn.classList.add('off');
+    util.classList.add('off');
+  }
 
-    if (e.target.className === 'search-btn') {
-      searchOn.classList.add('on');
-      headerLogoImg.src = '../../image/logo.png';
-      headerLogoImg.style.position = 'relative';
-      headerLogoImg.style.zIndex = 1;
-      headerLogoImg.style.display = '';
-      mobileUtil.style.display = '';
-
-      window.addEventListener('scroll', () => {
-        if (html.scrollTop === 0) {
-          headerLogoImg.src = '../../image/logo.png';
-        }
-
-        if (html.scrollTop < 1 && html.scrollTop > 1) {
-          headerLogoImg.src = '../../image/logo.png';
-        }
-      });
-
-      if (window.innerWidth > 320 && window.innerWidth < 1280) {
-        headerLogoImg.style.display = 'none';
-        mobileUtil.style.display = 'none';
-      }
-
-      window.addEventListener('resize', () => {
-        if (window.innerWidth > 320 && window.innerWidth < 1280) {
-          headerLogoImg.style.display = 'none';
-          mobileUtil.style.display = 'none';
-        } else {
-          headerLogoImg.style.display = 'block';
-        }
-      });
-    } else {
-      searchOn.classList.remove('on');
-
-      window.addEventListener('resize', () => {
-        if (window.innerWidth < 320 && window.innerWidth > 1280) {
-          headerLogoImg.style.display = 'block';
-          mobileUtil.style.display = '';
-        }
-      });
-      headerLogoImg.style.display = '';
-      mobileUtil.style.display = '';
-
-      window.addEventListener('scroll', () => {
-        if (html.scrollTop === 0) {
-          headerLogoImg.src = '../../image/logo_whtie.png';
-          if (window.location.href.includes('index') === false) {
-            headerLogoImg.src = '../../image/logo.png';
-          }
-        }
-        
-        if (html.scrollTop < 1 && html.scrollTop > 1) {
-          headerLogoImg.src = '../../image/logo_whtie.png';
-        }
-      });
-
-      if (html.scrollTop > 1) {
-        headerLogoImg.src = '../../image/logo.png';
-      } else {
-        headerLogoImg.src = '../../image/logo_whtie.png';
-        if (window.location.href.includes('index') === false) {
-          headerLogoImg.src = '../../image/logo.png';
-        }
-      }
-      headerLogoImg.style.position = '';
-      headerLogoImg.style.zIndex = '';
-    }
-  });
+  searchClose.addEventListener('click', headerSearchClose);
+  function headerSearchClose() {
+    searchBg.classList.remove('on');
+    searchBtn.classList.remove('off');
+    util.classList.remove('off');
+  }
 }
 
 // 스크롤 인터랙션

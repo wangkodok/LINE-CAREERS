@@ -421,8 +421,40 @@ video {
 
 
 
-/* 768px ~ 1280px */
-@media all and (min-width: 768px) and (max-width: 1280px) {
+/* 1025px ~ 1280px */
+@media all and (min-width: 1025px) and (max-width: 1280px) {
+  .main .title {margin: 0 0 64px 0; font-size: 32px; line-height: 40px;}
+
+  .visual .text-box {width: 386px; left: 64px;}
+  .visual .text-box .title {font-size: 50px; line-height: 50px; margin: 0 0 25px 0;}
+  .visual .text-list {flex-direction: column; align-items: flex-start; padding: 0 80px 0 0;}
+  .visual .text-list .list {flex-direction: column; align-items: flex-start; margin: 0 0 52px 0; width: 100%; height: 100%;}
+  .visual .text-list .list::after {content: none;}
+  .visual .text-list .item {position: relative; width: 100%;}
+  .visual .text-list .item::after {content: ''; position: absolute; right: 0; bottom: 0; left: 0; height: 2px; background-color: #fff;}
+  .visual .text-list .txt {margin: initial;}
+  .visual .text-list .txt::after {right: 6px;}
+  .visual .text-list-lnb {background-color: #fff; top: 100%; z-index: 1;}
+  .visual .text-list-lnb li {margin: 0 0 4px 0;}
+  .visual .text-list-lnb a {display: block; color: #000; padding: 4px 0 4px 14px;}
+  .visual .text-list-lnb::-webkit-scrollbar {width: 6px; /* 스크롤바의 너비 */}
+  .visual .text-list-lnb::-webkit-scrollbar-thumb {background-color: #07b53b; /* 스크롤바의 색상 */}
+  .visual .text-list-lnb::-webkit-scrollbar-track {background-color: transparent; /* 스크롤바 트랙 색상 */}
+
+  .post .title {font-size: 36px;}
+  .post .list .item {width: initial;}
+  .post .list .txt-box {width: initial;}
+
+  .profile .bg {background-image: url('../../image/main_m_profile_bg.jpg'); background-size: cover; height: 261px;}
+  .profile .contents {padding: 60px 0;}
+  .profile .list-item {width: 100%; margin: 0 16px 32px 16px;}
+  .profile .list-item a::after {content: none;}
+  .profile .list-item a:hover .tit {color: initial;}
+  .profile .list-item a:hover .more {display: none;}
+}
+
+/* 768px ~ 1024px */
+@media all and (min-width: 768px) and (max-width: 1024px) {
   .main .title {margin: 0 0 64px 0; font-size: 32px; line-height: 40px;}
 
   .visual .text-box {width: 386px; left: 64px;}
