@@ -40,9 +40,9 @@ caption {
 
 /* a 링크 초기화 */
 a {
+  display: block;
   color: #000;
   text-decoration: none;
-  display: block;
 }
 
 a:hover {
@@ -56,16 +56,16 @@ textarea,
 select,
 button,
 table {
-  font-family: 'Noto Sans KR', 'Nanum Gothic', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'dotum', '돋움', sans-serif;
   color: #000;
   font-size: 16px;
+  font-family: 'Noto Sans KR', 'Nanum Gothic', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'dotum', '돋움', sans-serif;
   line-height: 1.5;
 }
 
 /* 백그라운드 초기화 */
 button {
-  background: none;
   border: none;
+  background: none;
   cursor: pointer;
 }
 
@@ -91,8 +91,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: 14px;
   color: #000;
+  font-size: 14px;
   font-weight: normal;
 }
 
@@ -110,17 +110,17 @@ fieldset {
 /* 플롯해제 */
 /* clearboth */
 .clearboth::after {
-  content: '';
   display: block;
   clear: both;
+  content: '';
 }
 
 /* 웹 접근성 스크린리더기 */
 .blind {
-  overflow: hidden;
   position: absolute;
-  clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
   margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
 }

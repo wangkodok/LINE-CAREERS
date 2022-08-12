@@ -5,26 +5,26 @@
 }
 
 .people .visual::after {
-  content: '';
   position: absolute;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   height: 1px;
   background-color: #e1e1e1;
+  content: '';
 }
 
 .people .visual .inner {
   display: flex;
-  align-items: center;
   height: 264px;
   overflow: hidden;
+  align-items: center;
 }
 
 .people .contents-list {
   display: flex;
-  flex-wrap: wrap;
   width: auto;
+  flex-wrap: wrap;
 }
 
 .people .contents-list li {
@@ -68,29 +68,72 @@
 
 
 
-
-
-
-
-
 /* 768px ~ 1280px */
-@media all and (min-width: 768px) and (max-width: 1280px) {
-  .people .visual .inner {height: auto; display: block; padding: 24px 32px;}
-  .people .contents-list a {width: auto;margin: 0 32px;}
-  .people .contents-list li {width: 33.3%;margin: 0 0 60px 0;}
-  .people .txt-box .txt {font-size: 16px;}
-  .people .txt-box .txt-desc {font-size: 14px;}
-  .people-contents .inner {padding: 24px 0 0 0;}
-  .people-contents .more-btn {display: none;}
+@media all and (min-width:768px) and (max-width:1280px) {
+  .people .visual .inner {
+    display: block;
+    height: auto;
+    padding: 24px 32px;
+  }
+
+  .people .contents-list a {
+    width: auto;
+    margin: 0 32px;
+  }
+
+  .people .contents-list li {
+    width: 33.3%;
+    margin: 0 0 60px 0;
+  }
+
+  .people .txt-box .txt {
+    font-size: 16px;
+  }
+
+  .people .txt-box .txt-desc {
+    font-size: 14px;
+  }
+
+  .people-contents .inner {
+    padding: 24px 0 0 0;
+  }
+
+  .people-contents .more-btn {
+    display: none;
+  }
 }
 
 /* 320px ~ 767px */
-@media all and (min-width: 320px) and (max-width: 767px) {
-  .people .visual .inner {height: auto; display: block; padding: 24px 32px;}
-  .people .contents-list a {width: auto;margin: 0 16px;}
-  .people .contents-list li {width: 50%;margin: 0 0 32px 0;}
-  .people .txt-box .txt {font-size: 16px;}
-  .people .txt-box .txt-desc {font-size: 14px;}
-  .people-contents .inner {padding: 24px 0 0 0;}
-  .people-contents .more-btn {display: none;}
+@media all and (min-width:320px) and (max-width:767px) {
+  .people .visual .inner {
+    display: block;
+    height: auto;
+    padding: 24px 32px;
+  }
+
+  .people .contents-list a {
+    width: auto;
+    margin: 0 16px;
+  }
+
+  .people .contents-list li {
+    width: 50%;
+    margin: 0 0 32px 0;
+  }
+
+  .people .txt-box .txt {
+    font-size: 16px;
+  }
+
+  .people .txt-box .txt-desc {
+    font-size: 14px;
+  }
+
+  .people-contents .inner {
+    padding: 24px 0 0 0;
+  }
+
+  .people-contents .more-btn {
+    display: none;
+  }
 }

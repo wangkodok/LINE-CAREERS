@@ -2,9 +2,9 @@
 
 .culture .visual .inner {
   display: flex;
-  align-items: center;
-  overflow: hidden;
   height: 264px;
+  overflow: hidden;
+  align-items: center;
 }
 
 .map-wrap {
@@ -12,54 +12,54 @@
 }
 
 .map-wrap::after {
-  content: '';
   position: absolute;
+  z-index: -1;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
-  z-index: -1;
   width: 100%;
   height: 1px;
   background-color: #ddd;
+  content: '';
 }
 
 .map-wrap .map-btn {
   position: absolute;
-  bottom: -28px;
   left: 50%;
-  transform: translate(-50%, -9px);
+  bottom: -28px;
   padding: 0 14px 0 0;
   font-size: 12px;
+  transform: translate(-50%, -9px);
 }
 
 .map-wrap .map-btn::before {
-  content: '';
   position: absolute;
   top: 50%;
   right: 0;
-  transform: translate(0, -50%);
   width: 0px;
   height: 0px;
-  /* border-top: 4px solid none; */
-  border-bottom: 4px solid #000;
   border-right: 4px solid transparent;
-  border-left: 4px solid  transparent;
+  border-bottom: 4px solid #000;
+  border-left: 4px solid transparent;
+  content: '';
+  transform: translate(0, -50%);
+  /* border-top:4px solid none; */
 }
 
 .map-wrap .map-btn::after {
-  content: '';
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: -8px;
+  left: 50%;
+  width: 150px;
+  height: 35px;
+  background-color: #fff;
   background-image: url('../../image/map_onoff_btn.png');
   background-repeat: no-repeat;
   background-size: 150px;
-  width: 150px;
-  height: 35px;
-  display: block;
-  position: absolute;
-  top: -8px;
-  left: 50%;
+  content: '';
   transform: translate(-50%, 0);
-  background-color: #fff;
-  z-index: -1;
 }
 
 .map-wrap .map-contents {
@@ -93,84 +93,242 @@
 
 .map-wrap .map-item .icon {
   position: absolute;
-  bottom: 0;
   left: 50%;
-  transform: translate(-50%, 0);
+  bottom: 0;
+  width: 14px;
+  height: 14px;
   background-image: url('../../image/culture_map_icon.png');
   background-repeat: no-repeat;
-  background-size: 253px 230px;
   background-position: -217px -163px;
-  width: 14px;
-	height: 14px;
+  background-size: 253px 230px;
+  transform: translate(-50%, 0);
 }
 
 .map-wrap .map-item .icon::after {
-  content: '';
   position: absolute;
+  width: 37px;
+  height: 45px;
   background-image: url('../../image/culture_map_icon.png');
   background-repeat: no-repeat;
   background-size: 253px 230px;
-  width: 37px;
-	height: 45px;
+  content: '';
 }
 
 .map-wrap .icon-txt {
   position: absolute;
-  font-size: 11px;
   color: #08b33b;
+  font-size: 11px;
 }
 
-.map-wrap .Bangkok {top: 206px; left: 141px;}
-.map-wrap .Bangkok .icon::after {bottom: 2px; left: -10px; background-position: -161px -68px;}
-.map-wrap .Bangkok .icon-txt {bottom: -10px; left: -30px;}
+.map-wrap .Bangkok {
+  top: 206px;
+  left: 141px;
+}
 
-.map-wrap .Bundang {top: 40px; left: 358px; z-index: 1;}
-.map-wrap .Bundang .icon::after {bottom: 2px; left: -10px; background-position: -110px -9px;}
-.map-wrap .Bundang .icon-txt {bottom: 0; right: -34px;}
+.map-wrap .Bangkok .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -161px -68px;
+}
 
-.map-wrap .Dalian {top: -6px; left: 306px;}
-.map-wrap .Dalian .icon::after {bottom: 2px; left: -10px; background-position: -8px -68px;}
-.map-wrap .Dalian .icon-txt {bottom: 0; left: -20px;}
+.map-wrap .Bangkok .icon-txt {
+  left: -30px;
+  bottom: -10px;
+}
 
-.map-wrap .Fukuoka {top: 80px; left: 376px;}
-.map-wrap .Fukuoka .icon::after {bottom: 2px; left: -10px; background-position: -59px -68px;}
-.map-wrap .Fukuoka .icon-txt {bottom: -8px; right: -32px;}
+.map-wrap .Bundang {
+  z-index: 1;
+  top: 40px;
+  left: 358px;
+}
 
-.map-wrap .Hong-Kong {top: 160px; left: 252px;}
-.map-wrap .Hong-Kong .icon::after {bottom: 2px; left: -10px; background-position: -110px -68px;}
-.map-wrap .Hong-Kong .icon-txt {bottom: 0; left: -45px;}
+.map-wrap .Bundang .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -110px -9px;
+}
 
-.map-wrap .Jakarta {top: 378px; left: 162px;}
-.map-wrap .Jakarta .icon::after {bottom: 2px; left: -10px; background-position: -161px -9px;}
-.map-wrap .Jakarta .icon-txt {bottom: 0; left: -28px;}
+.map-wrap .Bundang .icon-txt {
+  right: -34px;
+  bottom: 0;
+}
 
-.map-wrap .Kyoto {top: 60px; left: 416px;}
-.map-wrap .Kyoto .icon::after {bottom: 2px; left: -10px; background-position: -8px -9px;}
-.map-wrap .Kyoto .icon-txt {bottom: -5px; right: -18px;}
+.map-wrap .Dalian {
+  top: -6px;
+  left: 306px;
+}
 
-.map-wrap .New-York {top: 87px; left: 1013px;}
-.map-wrap .New-York .icon::after {bottom: 2px; left: -10px; background-position: -8px -128px;}
-.map-wrap .New-York .icon-txt {bottom: -6px; right: -34px;}
+.map-wrap .Dalian .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -8px -68px;
+}
 
-.map-wrap .Palo-Alto {top: 45px; left: 645px;}
-.map-wrap .Palo-Alto .icon::after {bottom: 2px; left: -10px; background-position: -59px -128px;}
-.map-wrap .Palo-Alto .icon-txt {bottom: -6px; right: -34px;}
+.map-wrap .Dalian .icon-txt {
+  left: -20px;
+  bottom: 0;
+}
 
-.map-wrap .Seoul {top: 22px; left: 350px; z-index: 0;}
-.map-wrap .Seoul .icon::after {bottom: 2px; left: -10px; background-position: -110px -128px;}
-.map-wrap .Seoul .icon-txt {bottom: -6px; left: -14px;}
+.map-wrap .Fukuoka {
+  top: 80px;
+  left: 376px;
+}
 
-.map-wrap .Shanghai {top: 81px; left: 310px;}
-.map-wrap .Shanghai .icon::after {bottom: 2px; left: -10px; background-position: -161px -128px;}
-.map-wrap .Shanghai .icon-txt {bottom: -6px; left: -34px;}
+.map-wrap .Fukuoka .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -59px -68px;
+}
 
-.map-wrap .Taipei {top: 136px; left: 310px;}
-.map-wrap .Taipei .icon::after {bottom: 2px; left: -10px; background-position: -212px -9px;}
-.map-wrap .Taipei .icon-txt {bottom: -6px; right: -18px;}
+.map-wrap .Fukuoka .icon-txt {
+  right: -32px;
+  bottom: -8px;
+}
 
-.map-wrap .Tokyo {top: 50px; left: 447px;}
-.map-wrap .Tokyo .icon::after {bottom: 2px; left: -10px; background-position: -59px -9px;}
-.map-wrap .Tokyo .icon-txt {bottom: -6px; right: -18px;}
+.map-wrap .Hong-Kong {
+  top: 160px;
+  left: 252px;
+}
+
+.map-wrap .Hong-Kong .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -110px -68px;
+}
+
+.map-wrap .Hong-Kong .icon-txt {
+  left: -45px;
+  bottom: 0;
+}
+
+.map-wrap .Jakarta {
+  top: 378px;
+  left: 162px;
+}
+
+.map-wrap .Jakarta .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -161px -9px;
+}
+
+.map-wrap .Jakarta .icon-txt {
+  left: -28px;
+  bottom: 0;
+}
+
+.map-wrap .Kyoto {
+  top: 60px;
+  left: 416px;
+}
+
+.map-wrap .Kyoto .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -8px -9px;
+}
+
+.map-wrap .Kyoto .icon-txt {
+  right: -18px;
+  bottom: -5px;
+}
+
+.map-wrap .New-York {
+  top: 87px;
+  left: 1013px;
+}
+
+.map-wrap .New-York .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -8px -128px;
+}
+
+.map-wrap .New-York .icon-txt {
+  right: -34px;
+  bottom: -6px;
+}
+
+.map-wrap .Palo-Alto {
+  top: 45px;
+  left: 645px;
+}
+
+.map-wrap .Palo-Alto .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -59px -128px;
+}
+
+.map-wrap .Palo-Alto .icon-txt {
+  right: -34px;
+  bottom: -6px;
+}
+
+.map-wrap .Seoul {
+  z-index: 0;
+  top: 22px;
+  left: 350px;
+}
+
+.map-wrap .Seoul .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -110px -128px;
+}
+
+.map-wrap .Seoul .icon-txt {
+  left: -14px;
+  bottom: -6px;
+}
+
+.map-wrap .Shanghai {
+  top: 81px;
+  left: 310px;
+}
+
+.map-wrap .Shanghai .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -161px -128px;
+}
+
+.map-wrap .Shanghai .icon-txt {
+  left: -34px;
+  bottom: -6px;
+}
+
+.map-wrap .Taipei {
+  top: 136px;
+  left: 310px;
+}
+
+.map-wrap .Taipei .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -212px -9px;
+}
+
+.map-wrap .Taipei .icon-txt {
+  right: -18px;
+  bottom: -6px;
+}
+
+.map-wrap .Tokyo {
+  top: 50px;
+  left: 447px;
+}
+
+.map-wrap .Tokyo .icon::after {
+  left: -10px;
+  bottom: 2px;
+  background-position: -59px -9px;
+}
+
+.map-wrap .Tokyo .icon-txt {
+  right: -18px;
+  bottom: -6px;
+}
 
 .post .inner {
   max-width: 1232px;
@@ -196,11 +354,11 @@
 
 .post .txt-box p {
   display: -webkit-box;
+  overflow: hidden;
+  color: #616161;
   white-space: normal;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  overflow: hidden;
-  color: #616161;
 }
 
 .post .post-list .post-item {
@@ -225,23 +383,23 @@
 }
 
 .post .post-list .first::before {
-  content: '';
   position: absolute;
   top: 0;
   right: 0;
   width: 380px;
   height: 3px;
   background-color: #000;
+  content: '';
 }
 
 .post .post-list .first::after {
-  content: '';
   position: absolute;
   right: 0;
   bottom: 0;
   width: 380px;
   height: 2px;
   background-color: #e1e1e1;
+  content: '';
 }
 
 .post .first .link {
@@ -259,49 +417,138 @@
 }
 
 .post .first .tit {
-  font-size: 40px;
   width: 279px;
+  font-size: 40px;
 }
-
-
-
-
-
 
 
 
 
 
 /* 768px ~ 1280px */
-@media all and (min-width: 768px) and (max-width: 1280px) {
-  .culture .visual .inner {height: auto; padding: 24px 32px;}
-  .map-wrap {display: none;}
-  .post .contents {padding: initial;}
-  .post .post-list {margin: 0 0 20px 0;}
-  .post .post-list .post-item {position: static; width: auto; margin: 0 0 40px 0;}
-  .post .post-list .first::after {content: none;}
-  .post .post-list .first::before {content: none;}
-  .post .first .link {display: initial; justify-content: initial; align-items: initial; margin: 0 0 40px 0;}
-  .post .first .thumbnail {width: auto;}
-  .post .first .txt-box {width: auto;}
-  .post .txt-box .tit {font-size: 24px; width: initial; margin: 0 0 20px 0;}
-  .post .txt-box .tit-desc {font-size: 14px; line-height: 22px;}
-  .post .more-btn {display: none;}
+@media all and (min-width:768px) and (max-width:1280px) {
+  .culture .visual .inner {
+    height: auto;
+    padding: 24px 32px;
+  }
+
+  .map-wrap {
+    display: none;
+  }
+
+  .post .contents {
+    padding: initial;
+  }
+
+  .post .post-list {
+    margin: 0 0 20px 0;
+  }
+
+  .post .post-list .post-item {
+    position: static;
+    width: auto;
+    margin: 0 0 40px 0;
+  }
+
+  .post .post-list .first::after {
+    content: none;
+  }
+
+  .post .post-list .first::before {
+    content: none;
+  }
+
+  .post .first .link {
+    display: initial;
+    margin: 0 0 40px 0;
+    justify-content: initial;
+    align-items: initial;
+  }
+
+  .post .first .thumbnail {
+    width: auto;
+  }
+
+  .post .first .txt-box {
+    width: auto;
+  }
+
+  .post .txt-box .tit {
+    width: initial;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+  }
+
+  .post .txt-box .tit-desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .post .more-btn {
+    display: none;
+  }
 }
 
 /* 320px ~ 767px */
-@media all and (min-width: 320px) and (max-width: 767px) {
-  .culture .visual .inner {height: auto; padding: 24px 32px;}
-  .map-wrap {display: none;}
-  .post .contents {padding: initial;}
-  .post .post-list {margin: 0 0 20px 0;}
-  .post .post-list .post-item {position: static; width: auto; margin: 0 0 40px 0;}
-  .post .post-list .first::after {content: none;}
-  .post .post-list .first::before {content: none;}
-  .post .first .link {display: initial; justify-content: initial; align-items: initial; margin: 0 0 40px 0;}
-  .post .first .thumbnail {width: auto;}
-  .post .first .txt-box {width: auto;}
-  .post .txt-box .tit {font-size: 24px; width: initial; margin: 0 0 20px 0;}
-  .post .txt-box .tit-desc {font-size: 14px; line-height: 22px;}
-  .post .more-btn {display: none;}
+@media all and (min-width:320px) and (max-width:767px) {
+  .culture .visual .inner {
+    height: auto;
+    padding: 24px 32px;
+  }
+
+  .map-wrap {
+    display: none;
+  }
+
+  .post .contents {
+    padding: initial;
+  }
+
+  .post .post-list {
+    margin: 0 0 20px 0;
+  }
+
+  .post .post-list .post-item {
+    position: static;
+    width: auto;
+    margin: 0 0 40px 0;
+  }
+
+  .post .post-list .first::after {
+    content: none;
+  }
+
+  .post .post-list .first::before {
+    content: none;
+  }
+
+  .post .first .link {
+    display: initial;
+    margin: 0 0 40px 0;
+    justify-content: initial;
+    align-items: initial;
+  }
+
+  .post .first .thumbnail {
+    width: auto;
+  }
+
+  .post .first .txt-box {
+    width: auto;
+  }
+
+  .post .txt-box .tit {
+    width: initial;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+  }
+
+  .post .txt-box .tit-desc {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .post .more-btn {
+    display: none;
+  }
 }
