@@ -788,6 +788,10 @@ select {
   transform: rotate(135deg); /* 각도 */
 }
 
+.sub-footer .drop-down-list {
+  display: none;
+}
+
 .sub-footer .language-wrap {
   display: none;
 }
