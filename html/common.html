@@ -24,11 +24,20 @@
   <link rel="stylesheet" href="">
   <script src="../js/common.js"></script>
   <title>??? | LINE CAREERS</title>
+  <style>
+    /* 스킵 네비게이션 */
+    #skipNav {position:relative; z-index:9999;}
+    #skipNav a {position: absolute; top: -200px; left: 0; width: 200px; line-height: 48px; text-align: center; color: #fff; background-color: #08b33b; transition: all 0.5s ease;}
+    #skipNav a:focus, 
+    #skipNav a:active{top: 0; text-decoration: none;}
+  </style>
 </head>
 
 <body>
-  <div class="skip-nav">
-    <a href="#"></a>
+  <div id="skipNav">
+    <a href="#header">header</a>
+    <a href="#main">main</a>
+    <a href="#footer">footer</a>
   </div>
   <div class="wrap">
     <header class="sub-header">

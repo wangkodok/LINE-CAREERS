@@ -24,11 +24,19 @@
   <link rel="stylesheet" href="../../css/people/all.css">
   <script src="../../js/common.js"></script>
   <title>People | LINE CAREERS</title>
+  <style>
+    /* 스킵 네비게이션 */
+    #skipNav {position:relative; z-index:9999;}
+    #skipNav a {position: absolute; top: -200px; left: 0; width: 200px; line-height: 48px; text-align: center; color: #fff; background-color: #08b33b; transition: all 0.5s ease;}
+    #skipNav a:focus, 
+    #skipNav a:active{top: 0; text-decoration: none;}
+  </style>
 </head>
 
 <body>
-  <div class="skip-nav">
-    <a href="#"></a>
+  <div id="skipNav">
+    <a href="../index/index.html">메인으로 바로가기</a>
+    <a href="#people-contents">라인의 사람들 바로가기</a>
   </div>
   <div class="wrap">
     <header class="sub-header">
@@ -134,7 +142,7 @@
           </div>
         </div>
       </section>
-      <section class="people-contents">
+      <section id="people-contents" class="people-contents">
         <div class="inner">
           <div class="contents">
             <h2 class="blind">사람들</h2>

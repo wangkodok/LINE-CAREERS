@@ -39,19 +39,26 @@
     @media all and (min-width: 320px) and (max-width: 767px) {
       #popupWrap-container {display: none;}
     }
+
+    /* 스킵 네비게이션 */
+    #skipNav {position:relative; z-index:9999;}
+    #skipNav a {position: absolute; top: -200px; left: 0; width: 200px; line-height: 48px; text-align: center; color: #fff; background-color: #08b33b; transition: all 0.5s ease;}
+    #skipNav a:focus, 
+    #skipNav a:active{top: 0; text-decoration: none;}
   </style>
   <title>LINE CAREERS</title>
 </head>
 
 <body>
-  <div class="skip-nav">
-    <a href="#"></a>
+  <div id="skipNav">
+    <a href="#post">LINE에서 삶을 탐험</a>
+    <a href="#profile">글로벌 라이너</a>
   </div>
   <!-- 팝업창 -->
   <div id="popupWrap-container">
     <div class="popupWrap">
       <div class="popupCont">
-        <img src="../../popup-design.png" alt="HTML/CSS 반응형 웹 포트폴리오 Float, Position으로 되어있는 웹 사이트를 최신 기술 Flexbox로 구현했습니다. CSS 선택자 3개 이하로 작성, 최신 기술 Flexbox 사용, 공통 모듈화 헤더, 푸터, 버튼 등 현재는 JavaScript 작업 진행 중입니다.">
+        <img src="../../popup-design.png" alt="HTML/CSS 반응형 웹 포트폴리오 Float, Position으로 되어있는 웹 사이트를 최신 기술 Flexbox로 구현했습니다. CSS 선택자 3개 이하로 작성, 최신 기술 Flexbox 사용, 공통 모듈화 헤더, 푸터, 버튼 등 현재는 JavaScript 작업 진행 중입니다." title="팝업창">
       </div>
       <div class="popupBottom">
         <div class="left">
@@ -193,7 +200,7 @@
           </div>
         </div>
       </section>
-      <section class="post">
+      <section id="post" class="post">
         <div class="inner">
           <div class="contents">
             <h2 class="title">Explore Life at LINE</h2>
@@ -249,7 +256,7 @@
           </div>
         </div>
       </section>
-      <section class="profile">
+      <section id="profile" class="profile">
         <div class="bg"></div>
         <div class="inner">
           <div class="contents">
